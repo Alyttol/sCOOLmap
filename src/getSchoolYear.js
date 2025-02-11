@@ -20,11 +20,11 @@ async function getSchoolYear(hostName){
     }
 
     const data = await response.json();
-    console.log(data.data.activeSchoolYears[0].guid);
+    //console.log(data.data.activeSchoolYears[0].guid);
     return data.data.activeSchoolYears[0].guid;
   }catch(error){
     console.error("Error in getSchoolYear: ", error);
   }
 }
-
+module.exports = { getSchoolYear };
 getSchoolYear("Orebro.skola24.se")

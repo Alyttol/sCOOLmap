@@ -16,11 +16,11 @@ async function getSig(id){
       throw new Error("Network response was not ok" + response.statusText);
     }
     const data = await response.json();
-    console.log("sig: " + data.data.signature)
+    //console.log("sig: " + data.data.signature)
     return data.data.signature;
   }catch (error){
     console.error("Error in getSignature: ", error);
   }
 }
-
+module.exports = { getSig };
 getSig("Teim22")

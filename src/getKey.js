@@ -12,13 +12,14 @@ async function getKey() {
         },
       },
     );
-    console.log(response.data.data.key);
+    //console.log(response.data.data.key);
     return response.data.data.key;
   } catch (error) {
     console.error("Error in getKey: ", error);
     throw error;
   }
 }
+module.exports = { getKey };
 
 getKey();
 
